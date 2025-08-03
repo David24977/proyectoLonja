@@ -28,7 +28,7 @@ Aplicación web para gestionar la entrada y salida de hielo, el registro de caja
 ## Estructura del repositorio
 proyectoLonja/
 │
-├── backend/ # Spring Boot (API REST, lógica de negocio, JPA)
+├── backend/hielo # Spring Boot (API REST, lógica de negocio, JPA)
 └── frontend/ # React (interfaz de usuario)
 
 
@@ -47,9 +47,9 @@ cd proyectoLonja
 2. Backend (Spring Boot)
 Requisitos: Java 17+, Maven, MySQL
 
-Entra en la carpeta backend:
+Entra en la carpeta backend/hielo:
 ```bash
-cd backend
+cd backend/hielo
 ```
 
 Nota:
