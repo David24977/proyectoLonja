@@ -52,7 +52,8 @@ Entra en la carpeta backend:
 cd backend
 ```
 
-Configura tu base de datos en application.properties
+Nota:
+Copia el archivo application.properties  y rellénalo con tus datos de base de datos y correo antes de arrancar el backend.
 Arranca el servidor:
 ```bash
 mvn spring-boot:run
