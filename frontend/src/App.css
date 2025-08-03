@@ -1,0 +1,269 @@
+body {
+  background: #f4f6fb;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #2b407e;
+  margin-top: 1em;
+  margin-bottom: 1.2em;
+}
+
+nav {
+  margin-bottom: 2em;
+  display: flex;
+  gap: 1em;
+  background: #fff;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #d3dff7;
+}
+
+button {
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #e3eafe;
+  color: #25408f;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #bdd3fc;
+  color: #10234a;
+}
+
+/* Forzamos fondo blanco y texto oscuro en las cajas y formularios */
+.form-box, 
+div[style*="background: #fff"] {
+  background: #fff !important;
+  color: #1a1a1a !important;
+}
+
+/* Todos los inputs y labels: fondo blanco, texto oscuro, padding y separación */
+input, label, select {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  padding: 0.7em 1em;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  border: 1px solid #cdd1d6;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form > div {
+  margin-bottom: 1.2em;
+}
+
+/* Que el texto de los campos y botones siempre sea legible */
+button, label {
+  color: #25408f !important;
+  background: #e3eafe !important;
+}
+
+button:hover {
+  background: #bdd3fc !important;
+}
+
+@media (max-width: 600px) {
+  .form-box {
+    padding: 1em !important;
+    max-width: 99vw;
+  }
+  input, button {
+    font-size: 1em;
+  }
+}
+
+/* Para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #151925;
+    color: #e3eefe;
+  }
+  nav, .form-box, div[style*="background: #fff"] {
+    background: #232944 !important;
+    color: #e3eefe !important;
+    box-shadow: 0 2px 8px #101222;
+  }
+  input, select, textarea, button {
+    background: #2d354e !important;
+    color: #e3eefe !important;
+    border: 1px solid #4e5685;
+  }
+  h1, h2, h3, h4, label {
+    color: #e3eefe !important;
+  }
+}
+
+/* Forzar a cambiar a oscuro todos los inputs */
+@media (prefers-color-scheme: dark) {
+  /* Obliga a los campos de entrada a heredar el color oscuro */
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="password"],
+  select,
+  textarea {
+    background: #2d354e !important;
+    color: #e3eefe !important;
+    border: 1px solid #4e5685 !important;
+  }
+  /* El placeholder (texto gris dentro del campo) también claro */
+  input::placeholder,
+  textarea::placeholder {
+    color: #a4b1d1 !important;
+    opacity: 1 !important;
+  }
+  /* Y si algún input sigue fallando, fuerza el color heredado */
+  input, select, textarea, label {
+    color: #e3eefe !important;
+    background: #2d354e !important;
+  }
+  input, select, textarea {
+  box-shadow: 0 2px 8px #b9cfff1f;
+}
+
+}
+
+label {
+  font-size: 1.08em;
+  font-weight: bold;
+  color: #2960c5 !important;  /* Un azul intenso legible, puedes cambiarlo */
+  margin-bottom: 0.3em;
+  display: block;
+  letter-spacing: 0.5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  label {
+    color: #7cbfff !important; /* Azul claro en modo oscuro */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  table, thead, tbody, th, td {
+    background: #232944 !important;
+    color: #e3eefe !important;
+    border-color: #39426b !important;
+  }
+  th {
+    background: #1b213a !important;
+    color: #80aaff !important;
+  }
+  tr:nth-child(even) td {
+    background: #242a45 !important;
+  }
+  /* Opcional: Cambia el color del botón de borrar en modo oscuro */
+  button[title="Eliminar registro"], button[title="Eliminar devolución"] {
+    color: #ff6666 !important;
+  }
+}
+
+/* Para adaptar a los diferentes devices, Responsive */
+@media (max-width: 850px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    /* No permitas que la tabla se “coma” la pantalla */
+    max-width: 100vw;
+    border-radius: 10px;
+  }
+  thead, tbody, tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  th, td {
+    padding: 0.7em 0.3em;
+    font-size: 0.96em;
+    word-break: break-word;
+    min-width: 100px;
+  }
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  h2, h3 {
+    font-size: 1.2em;
+  }
+  table {
+    font-size: 0.94em;
+  }
+  form > div {
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  input, select, button {
+    font-size: 1em;
+    padding: 0.7em 0.6em;
+  }
+  label {
+    font-size: 1em;
+  }
+  .form-box {
+    padding: 0.7em !important;
+  }
+}
+
+
+
+
+
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+
