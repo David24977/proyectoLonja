@@ -80,6 +80,7 @@ Abre el navegador en http://localhost:5173
 ---
 
  Roles y funcionalidades:
+
 Oficina: Acceso completo, resúmenes, informes, gestión de usuarios/barcas/clientes, edición de precios, etc.
 
 Operario: Acceso a registro diario, devolución de cajas y operaciones básicas.
